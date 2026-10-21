@@ -59,6 +59,89 @@ if (typeof window !== 'undefined') {
   }
 }
 </script>
+
+<style id="medisave-custom-overrides">
+  /* MediSave Glass Navbar */
+  .medisave-nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 78px !important;
+    min-height: 78px !important;
+    z-index: 99999 !important;
+    display: flex !important;
+    align-items: center !important;
+    background: rgba(169, 211, 66, 0.88) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    border-bottom: 1px solid rgba(27, 10, 102, 0.12) !important;
+    box-shadow: 0 4px 20px rgba(27, 10, 102, 0.08) !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .medisave-nav-inner {
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 20px !important;
+  }
+
+  .medisave-nav-links {
+    display: flex !important;
+    align-items: center !important;
+    gap: 24px !important;
+  }
+
+  .medisave-nav-link {
+    color: #1B0A66 !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    transition: all 0.2s ease !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+  }
+
+  .medisave-nav-link:hover {
+    background: rgba(27, 10, 102, 0.08) !important;
+    color: #1B0A66 !important;
+  }
+
+  .medisave-auth-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  /* Offset hero section so fixed navbar never overlaps */
+  .section_home-hero {
+    padding-top: 110px !important;
+  }
+
+  /* Completely remove Made in Webflow badge */
+  .w-webflow-badge,
+  a[href*="webflow.com"],
+  .webflow-badge {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+  }
+</style>
+
 </head><body><div class="page-wrapper"><div class="global-styles w-embed"><style>
 
 /* Make text look crisper and more legible in all browsers */
@@ -254,36 +337,59 @@ margin: 0rem !important;
   padding-left: 0rem !important;
 }
 
-</style></div><div data-animation="default" class="nav w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="373bca12-84e8-fec5-c8e3-184c53d5c909" role="banner" data-duration="400"><div class="nav_container"><a href="/" aria-current="page" class="nav_logo-link w-nav-brand w--current" style="display:inline-flex; align-items:center; gap:12px; text-decoration:none; padding:4px 0;">
-  <div style="width:38px; height:38px; background:#1B0A66; border-radius:12px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(27,10,102,0.25);">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A6D63A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 2v20M2 12h20"/>
-    </svg>
-  </div>
-  <span style="font-size:26px; font-weight:800; color:#1B0A66; letter-spacing:-0.5px; font-family:inherit;">Medi<span style="color:#1FAE6B;">Save</span></span>
-</a><nav role="navigation" id="w-node-_373bca12-84e8-fec5-c8e3-184c53d5c90d-53d5c909" class="navbar2_menu is-page-height-tablet w-nav-menu">
-  <a href="/" aria-current="page" class="nav_link w-nav-link w--current">Home</a>
-  <a href="#drug-form" class="nav_link w-nav-link">Search Medicines</a>
-  <a href="#how-it-works" class="nav_link w-nav-link">How It Works</a>
-  <a href="#medicine-info" class="nav_link w-nav-link">Medicine Info</a>
-  <a href="#faqs" class="nav_link w-nav-link">FAQs</a>
-  <button id="open-login-mobile-btn" class="button is-mobile w-button" style="cursor:pointer; border:none; margin-top:12px; background-color:#1FAE6B; color:#ffffff;">Login</button>
-</nav></div><a href="/help-center" class="nav_link w-nav-link">Help Center</a><a href="/get-a-card" class="button is-mobile w-button">Get a Card!</a></nav><div id="w-node-_373bca12-84e8-fec5-c8e3-184c53d5c924-53d5c909" class="navbar2_button-wrapper">
-  <button id="open-login-btn" class="button is_desktop w-button" style="cursor:pointer; border:none; display:inline-flex; align-items:center; gap:8px; background-color:#1FAE6B; color:#ffffff; font-weight:700;">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-      <circle cx="12" cy="7" r="4"></circle>
-    </svg>
-    Login
-  </button>
-  <div class="navbar2_menu-button w-nav-button">
-    <div class="menu-icon2">
-      <div class="menu-icon2_line-top"></div>
-      <div class="menu-icon2_line-middle"><div class="menu-icon_line-middle-inner"></div></div>
-      <div class="menu-icon2_line-bottom"></div>
+</style></div><header class="medisave-nav" role="banner">
+  <div class="medisave-nav-inner">
+    <!-- MediSave Logo -->
+    <a href="/" class="nav_logo-link w-nav-brand" style="display:inline-flex; align-items:center; gap:12px; text-decoration:none;">
+      <div style="width:42px; height:42px; background:#1B0A66; border-radius:12px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(27,10,102,0.3); flex-shrink:0;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A6D63A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2v20M2 12h20"/>
+        </svg>
+      </div>
+      <div style="display:flex; flex-direction:column;">
+        <span style="font-size:26px; font-weight:800; color:#1B0A66; letter-spacing:-0.5px; line-height:1; font-family:inherit;">
+          Medi<span style="color:#1FAE6B;">Save</span>
+        </span>
+        <span style="font-size:10px; font-weight:700; color:#1B0A66; opacity:0.8; letter-spacing:0.8px; text-transform:uppercase; margin-top:2px;">
+          दवा बचत • Generic Medicines
+        </span>
+      </div>
+    </a>
+
+    <!-- Navigation Links -->
+    <nav class="medisave-nav-links">
+      <a href="/" class="medisave-nav-link">Home</a>
+      <a href="#drug-form" class="medisave-nav-link">Search Medicines</a>
+      <a href="#how-it-works" class="medisave-nav-link">How It Works</a>
+      <a href="#medicine-info" class="medisave-nav-link">Medicine Info</a>
+      <a href="#faqs" class="medisave-nav-link">FAQs</a>
+    </nav>
+
+    <!-- Auth & Login Option Buttons -->
+    <div class="medisave-auth-actions">
+      <!-- Login Button -->
+      <button id="open-login-btn" type="button" style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.7); color:#1B0A66; font-weight:700; font-size:14px; padding:9px 18px; border:1.5px solid #1B0A66; border-radius:9999px; cursor:pointer; transition:all 0.2s; -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        Login
+      </button>
+
+      <!-- Auth / Sign Up Button -->
+      <button id="open-signup-btn" type="button" style="display:inline-flex; align-items:center; gap:8px; background:#1B0A66; color:#ffffff; font-weight:700; font-size:14px; padding:10px 20px; border:none; border-radius:9999px; cursor:pointer; box-shadow:0 4px 14px rgba(27,10,102,0.25); transition:all 0.2s;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A6D63A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="8.5" cy="7" r="4"></circle>
+          <line x1="20" y1="8" x2="20" y2="14"></line>
+          <line x1="23" y1="11" x2="17" y2="11"></line>
+        </svg>
+        Sign Up Free
+      </button>
     </div>
   </div>
-</div></div></div></div></div></div><main class="main-wrapper"><div class="section_home-hero padding-top padding-xxhuge"><div class="container-medium margin-bottom margin-large w-container"><div class="column_2 w-row"><div class="column-5 w-col w-col-4"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/637fe8bc4a6ede5b504ffb29_budgetrx_home-hero-graphic.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, 32vw" srcset="https://assets-global.website-files.com/6375a1fe1054d4cf080053e5/637fe8bc4a6ede5b504ffb29_budgetrx_home-hero-graphic-p-500.png 500w, https://assets-global.website-files.com/6375a1fe1054d4cf080053e5/637fe8bc4a6ede5b504ffb29_budgetrx_home-hero-graphic-p-800.png 800w, https://assets-global.website-files.com/6375a1fe1054d4cf080053e5/637fe8bc4a6ede5b504ffb29_budgetrx_home-hero-graphic-p-1080.png 1080w, https://assets-global.website-files.com/6375a1fe1054d4cf080053e5/637fe8bc4a6ede5b504ffb29_budgetrx_home-hero-graphic.png 1200w" alt="A graphic illustration of golden coins dropping into a piggy bank to represent how BudgetRx can help save pharmacy customer on their drug costs." class="image-5"/></div><div class="home_hero-wrapper w-col w-col-8"><h1 class="heading-style-h1 padding-bottom padding-small">Get discounts on 10,000+ prescriptions.</h1><div class="text-size-medium padding-bottom padding-medium">Stop paying too much for pharmacy prescriptions. Search for discounts for drug prescriptions.</div><div id="drug-form" class="form-block w-form"><form id="wf-form-drug-form" name="wf-form-drug-form" data-name="drug-form" action="/" method="get" class="search_container" data-wf-page-id="6375a1fe1054d4bfd80053e6" data-wf-element-id="ace1b35f-f89e-f249-5a50-a21ec400552c"><input class="searchbar w-input" autocomplete="off" maxlength="256" name="Drug-Search" data-name="Drug Search" placeholder="Search drug discounts ..." type="text" id="drug-search"/></form><div id="autofill-container" class="autofill-container"></div><div class="w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div><div id="autofill-entry" class="autofill-entry"><div class="autofill-size_wrapper"><div id="autofill-value" class="autofill-value">Drug Name</div><div class="autofill-button_text">Compare Prices &gt;</div></div><div class="package-size_units-wrapper"><div id="autofill-package-size" class="package_size">000</div><div class="package_size">ct.</div><div id="autofill-package-size-label" class="package_size-label">unit</div></div></div></div></div></div></div><div class="section_savings-slider"><div class="color-split_top-green"></div><div class="savings-slider_container container-small w-container"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e2c906267a580d96c31c_coupong_graphic.svg" loading="lazy" alt="Graphic illustration of savings."/></div><div class="text-align-left w-col w-col-9"><h2 class="heading-style-h2 text-color-white">Save with the most popular deals.</h2><div class="text-size-medium text-color-white">Here&#x27;s how much you can save on popular medications with a BudgetRx coupon.</div></div></div><div class="savings-slider_component margin-vertical margin-medium"><div data-delay="4000" data-animation="slide" class="savings_slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="false" id="gallery13_slider"><div class="savings-slider_mask w-slider-mask"><div class="savgins-slider_card-container w-slide"><a id="drug-1" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Atorvastatin</h3><div class="text-size-regular text-color-dark">20 mg tablet</div></div></div><div class="og_price">$28</div><div class="discount_price">$6.55</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div><div class="savgins-slider_card-container w-slide"><a id="drug-2" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Levothyroxine</h3><div class="text-size-regular text-color-dark">100 mcg tablet</div></div></div><div class="og_price">$33</div><div class="discount_price">$7.91</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div><div class="savgins-slider_card-container w-slide"><a id="drug-3" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Lisinopril</h3><div class="text-size-regular text-color-dark">20 mg tablet</div></div></div><div class="og_price">$21</div><div class="discount_price">$7.79</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div><div class="savgins-slider_card-container w-slide"><a id="drug-4" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Albuterol</h3><div class="text-size-regular text-color-dark">HFA inhaler (8.5 gram)</div></div></div><div class="og_price">$62.50</div><div class="discount_price">$32.50</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div><div class="savgins-slider_card-container w-slide"><a id="drug-5" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Amlodipine</h3><div class="text-size-regular text-color-dark">5 mg tablet</div></div></div><div class="og_price">$39.50</div><div class="discount_price">$7.78</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div><div class="savgins-slider_card-container w-slide"><a id="drug-6" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Gabapentin</h3><div class="text-size-regular text-color-dark">300 mg capsule</div></div></div><div class="og_price">$75.50</div><div class="discount_price">$6.90</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div><div class="savgins-slider_card-container w-slide"><a id="drug-7" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Omeprazole</h3><div class="text-size-regular text-color-dark">20 mg capsule</div></div></div><div class="og_price">$32.50</div><div class="discount_price">$7.40</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div><div class="savgins-slider_card-container w-slide"><a id="drug-8" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Losartan</h3><div class="text-size-regular text-color-dark">50 mg tablet</div></div></div><div class="og_price">$23.68</div><div class="discount_price">$7.36</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div><div class="savgins-slider_card-container w-slide"><a id="drug-9" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Metformin</h3><div class="text-size-regular text-color-dark">500 mg tablet</div></div></div><div class="og_price">$15.50</div><div class="discount_price">$7.20</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div><div class="savgins-slider_card-container w-slide"><a id="drug-10" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Escitalopram</h3><div class="text-size-regular text-color-dark">10 mg tablet</div></div></div><div class="og_price">$17.98</div><div class="discount_price">$7.36</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div></div><div class="gallery21_arrow is-left w-slider-arrow-left"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e919a4fc884059bd94ef_arrow-left.svg" loading="lazy" alt="Back arrow"/></div><div class="gallery21_arrow w-slider-arrow-right"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e91a06267a5e29974ae3_arrow-right.svg" loading="lazy" alt="Next Arrow"/></div><div class="gallery21_slide-nav w-slider-nav w-round"></div></div></div></div></div><div id="how-it-works" class="section_home-hiw padding-vertical padding-xxhuge"><div class="how-it-works_wrapper container-medium w-container"><div class="section-heading_container"><h2 class="heading-style-h2 text-align-center">How it works</h2><div class="text-size-medium text-align-center">Here&#x27;s how much you can save on popular medications with a BudgetRx coupon.</div></div><div class="w-layout-grid how-it-works_grid"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/63978b2260509c388401676f_how-it-works_1.svg" loading="lazy" id="w-node-bb901765-c7b1-ee25-6b7a-feecc93c2fea-d80053e6" alt="Graphic illustration of a scale comparing the weight of medicine. This is to represent how BudgetRx allows customers to compare the prices of medicine."/><div id="w-node-_0ea193e8-f30e-ec4e-88dd-6c67539e7efe-d80053e6" class="line-img_container padding-vertical padding-xxhuge hide-mobile-portrait"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380f2f7bd1402caf6b33233_line.svg" loading="lazy" alt=""/></div><div id="w-node-_2765021a-7cf4-566f-333a-0f10ab38317f-d80053e6" class="step-wrapper-right"><div class="highlight_text">STEP 1</div><h3 class="heading-style-h3">Compare prices</h3><div class="text-size-medium">BudgetRx compares the varying prices among pharmacies for you &amp; gives you the best price.</div></div><div id="w-node-_2a59b51b-23ed-06ea-06c8-b6d1efbea0ac-d80053e6" class="step-wrapper-left">
+</header>
+<main class="main-wrapper"><div class="section_home-hero padding-top padding-xxhuge"><div class="container-medium margin-bottom margin-large w-container"><div class="column_2 w-row"><div class="column-5 w-col w-col-4"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/637fe8bc4a6ede5b504ffb29_budgetrx_home-hero-graphic.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, 32vw" srcset="https://assets-global.website-files.com/6375a1fe1054d4cf080053e5/637fe8bc4a6ede5b504ffb29_budgetrx_home-hero-graphic-p-500.png 500w, https://assets-global.website-files.com/6375a1fe1054d4cf080053e5/637fe8bc4a6ede5b504ffb29_budgetrx_home-hero-graphic-p-800.png 800w, https://assets-global.website-files.com/6375a1fe1054d4cf080053e5/637fe8bc4a6ede5b504ffb29_budgetrx_home-hero-graphic-p-1080.png 1080w, https://assets-global.website-files.com/6375a1fe1054d4cf080053e5/637fe8bc4a6ede5b504ffb29_budgetrx_home-hero-graphic.png 1200w" alt="A graphic illustration of golden coins dropping into a piggy bank to represent how BudgetRx can help save pharmacy customer on their drug costs." class="image-5"/></div><div class="home_hero-wrapper w-col w-col-8"><h1 class="heading-style-h1 padding-bottom padding-small">Get discounts on 10,000+ prescriptions.</h1><div class="text-size-medium padding-bottom padding-medium">Stop paying too much for pharmacy prescriptions. Search for discounts for drug prescriptions.</div><div id="drug-form" class="form-block w-form"><form id="wf-form-drug-form" name="wf-form-drug-form" data-name="drug-form" action="/" method="get" class="search_container" data-wf-page-id="6375a1fe1054d4bfd80053e6" data-wf-element-id="ace1b35f-f89e-f249-5a50-a21ec400552c"><input class="searchbar w-input" autocomplete="off" maxlength="256" name="Drug-Search" data-name="Drug Search" placeholder="Search drug discounts ..." type="text" id="drug-search"/></form><div id="autofill-container" class="autofill-container"></div><div class="w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div><div id="autofill-entry" class="autofill-entry"><div class="autofill-size_wrapper"><div id="autofill-value" class="autofill-value">Drug Name</div><div class="autofill-button_text">Compare Prices &gt;</div></div><div class="package-size_units-wrapper"><div id="autofill-package-size" class="package_size">000</div><div class="package_size">ct.</div><div id="autofill-package-size-label" class="package_size-label">unit</div></div></div></div></div></div></div><div class="section_savings-slider"><div class="color-split_top-green"></div><div class="savings-slider_container container-small w-container"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e2c906267a580d96c31c_coupong_graphic.svg" loading="lazy" alt="Graphic illustration of savings."/></div><div class="text-align-left w-col w-col-9"><h2 class="heading-style-h2 text-color-white">Save with the most popular deals.</h2><div class="text-size-medium text-color-white">Here&#x27;s how much you can save on popular medications with a BudgetRx coupon.</div></div></div><div class="savings-slider_component margin-vertical margin-medium"><div data-delay="4000" data-animation="slide" class="savings_slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="false" id="gallery13_slider"><div class="savings-slider_mask w-slider-mask"><div class="savgins-slider_card-container w-slide"><a id="drug-1" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Atorvastatin</h3><div class="text-size-regular text-color-dark">20 mg tablet</div></div></div><div class="og_price">$28</div><div class="discount_price">$6.55</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div><div class="savgins-slider_card-container w-slide"><a id="drug-2" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Levothyroxine</h3><div class="text-size-regular text-color-dark">100 mcg tablet</div></div></div><div class="og_price">$33</div><div class="discount_price">$7.91</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div><div class="savgins-slider_card-container w-slide"><a id="drug-3" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Lisinopril</h3><div class="text-size-regular text-color-dark">20 mg tablet</div></div></div><div class="og_price">$21</div><div class="discount_price">$7.79</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div><div class="savgins-slider_card-container w-slide"><a id="drug-4" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Albuterol</h3><div class="text-size-regular text-color-dark">HFA inhaler (8.5 gram)</div></div></div><div class="og_price">$62.50</div><div class="discount_price">$32.50</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div><div class="savgins-slider_card-container w-slide"><a id="drug-5" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Amlodipine</h3><div class="text-size-regular text-color-dark">5 mg tablet</div></div></div><div class="og_price">$39.50</div><div class="discount_price">$7.78</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div><div class="savgins-slider_card-container w-slide"><a id="drug-6" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Gabapentin</h3><div class="text-size-regular text-color-dark">300 mg capsule</div></div></div><div class="og_price">$75.50</div><div class="discount_price">$6.90</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div><div class="savgins-slider_card-container w-slide"><a id="drug-7" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Omeprazole</h3><div class="text-size-regular text-color-dark">20 mg capsule</div></div></div><div class="og_price">$32.50</div><div class="discount_price">$7.40</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div><div class="savgins-slider_card-container w-slide"><a id="drug-8" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Losartan</h3><div class="text-size-regular text-color-dark">50 mg tablet</div></div></div><div class="og_price">$23.68</div><div class="discount_price">$7.36</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div><div class="savgins-slider_card-container w-slide"><a id="drug-9" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Metformin</h3><div class="text-size-regular text-color-dark">500 mg tablet</div></div></div><div class="og_price">$15.50</div><div class="discount_price">$7.20</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div><div class="savgins-slider_card-container w-slide"><a id="drug-10" href="#" class="savings-slider_card w-inline-block"><div class="savings-slider_header w-row"><div class="w-col w-col-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e846a4fc880948bd7610_pill.svg" loading="lazy" alt="Icon for pill" class="savings-slider_card-icon"/></div><div class="w-col w-col-9"><h3 class="heading-style-h3">Escitalopram</h3><div class="text-size-regular text-color-dark">10 mg tablet</div></div></div><div class="og_price">$17.98</div><div class="discount_price">$7.36</div><div class="text-size-regular text-color-dark">35% off prices with BudgetRx coupons</div></a></div></div><div class="gallery21_arrow is-left w-slider-arrow-left"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e919a4fc884059bd94ef_arrow-left.svg" loading="lazy" alt="Back arrow"/></div><div class="gallery21_arrow w-slider-arrow-right"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380e91a06267a5e29974ae3_arrow-right.svg" loading="lazy" alt="Next Arrow"/></div><div class="gallery21_slide-nav w-slider-nav w-round"></div></div></div></div></div><div id="how-it-works" class="section_home-hiw padding-vertical padding-xxhuge"><div class="how-it-works_wrapper container-medium w-container"><div class="section-heading_container"><h2 class="heading-style-h2 text-align-center">How it works</h2><div class="text-size-medium text-align-center">Here&#x27;s how much you can save on popular medications with a BudgetRx coupon.</div></div><div class="w-layout-grid how-it-works_grid"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/63978b2260509c388401676f_how-it-works_1.svg" loading="lazy" id="w-node-bb901765-c7b1-ee25-6b7a-feecc93c2fea-d80053e6" alt="Graphic illustration of a scale comparing the weight of medicine. This is to represent how BudgetRx allows customers to compare the prices of medicine."/><div id="w-node-_0ea193e8-f30e-ec4e-88dd-6c67539e7efe-d80053e6" class="line-img_container padding-vertical padding-xxhuge hide-mobile-portrait"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/6380f2f7bd1402caf6b33233_line.svg" loading="lazy" alt=""/></div><div id="w-node-_2765021a-7cf4-566f-333a-0f10ab38317f-d80053e6" class="step-wrapper-right"><div class="highlight_text">STEP 1</div><h3 class="heading-style-h3">Compare prices</h3><div class="text-size-medium">BudgetRx compares the varying prices among pharmacies for you &amp; gives you the best price.</div></div><div id="w-node-_2a59b51b-23ed-06ea-06c8-b6d1efbea0ac-d80053e6" class="step-wrapper-left">
   <div class="highlight_text">STEP 2</div>
   <h3 class="heading-style-h3">Verify Jan Aushadhi generic</h3>
   <div class="text-size-medium">Instantly view verified Jan Aushadhi generic alternatives matching the exact active chemical composition, strength, and regulated ceiling prices.</div>
@@ -458,7 +564,7 @@ margin: 0rem !important;
       </div>
     </div>
   </div>
-</div></div><div class="footer"><div data-w-id="9d6bca53-67d0-4e27-e6f4-fd937b204288" class="footer_container container-medium w-container"><div class="footer-column w-row"><div class="footer_info_container w-col w-col-10"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/637e6eed4b8932bca98ecf2a_Logo.png" loading="lazy" alt="" sizes="(max-width: 479px) 100vw, (max-width: 767px) 41vw, 300px" srcset="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/637e6eed4b8932bca98ecf2a_Logo-p-500.png 500w, https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/637e6eed4b8932bca98ecf2a_Logo-p-800.png 800w, https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/637e6eed4b8932bca98ecf2a_Logo-p-1080.png 1080w, https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/637e6eed4b8932bca98ecf2a_Logo-p-1600.png 1600w, https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/637e6eed4b8932bca98ecf2a_Logo-p-2000.png 2000w, https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/637e6eed4b8932bca98ecf2a_Logo-p-2600.png 2600w, https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/637e6eed4b8932bca98ecf2a_Logo-p-3200.png 3200w, https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/637e6eed4b8932bca98ecf2a_Logo.png 5739w" class="footer-logo"/><div class="div-block"><a href="tel:18776840032" class="icon-button w-inline-block"><div class="icon-2 w-embed"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div></div><div class="footer"><div data-w-id="9d6bca53-67d0-4e27-e6f4-fd937b204288" class="footer_container container-medium w-container"><div class="footer-column w-row"><div class="footer_info_container w-col w-col-10"><a href="/" style="display:inline-flex; align-items:center; gap:12px; text-decoration:none; margin-bottom:16px;"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/63939ef90fc162a33c7d69dd_web-img.png" alt="MediSave Logo" width="36" height="36" style="width:36px; height:36px; object-fit:contain; border-radius:8px;" /><span style="font-size:26px; font-weight:800; color:#1B0A66; letter-spacing:-0.5px;">Medi<span style="color:#1FAE6B;">Save</span></span></a><div class="div-block"><a href="tel:18776840032" class="icon-button w-inline-block"><div class="icon-2 w-embed"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M21 16.42V19.956C21.0001 20.2092 20.9042 20.453 20.7316 20.6382C20.559 20.8234 20.3226 20.9363 20.07 20.954C19.633 20.984 19.276 21 19 21C10.163 21 3 13.837 3 5C3 4.724 3.015 4.367 3.046 3.93C3.06372 3.67744 3.17658 3.44101 3.3618 3.26841C3.54703 3.09581 3.79082 2.99989 4.044 3H7.58C7.70404 2.99987 7.8237 3.04586 7.91573 3.12902C8.00776 3.21218 8.0656 3.32658 8.078 3.45C8.101 3.68 8.122 3.863 8.142 4.002C8.34073 5.38892 8.748 6.73783 9.35 8.003C9.445 8.203 9.383 8.442 9.203 8.57L7.045 10.112C8.36445 13.1865 10.8145 15.6365 13.889 16.956L15.429 14.802C15.4919 14.714 15.5838 14.6509 15.6885 14.6237C15.7932 14.5964 15.9042 14.6068 16.002 14.653C17.267 15.2539 18.6156 15.6601 20.002 15.858C20.141 15.878 20.324 15.9 20.552 15.922C20.6752 15.9346 20.7894 15.9926 20.8724 16.0846C20.9553 16.1766 21.0012 16.2961 21.001 16.42H21Z" fill="currentColor"/>
 </svg></div><div>Call at 1800-180-8080 (Jan Aushadhi Helpline)</div></a><a href="mailto:support@medisave.in " class="icon-button w-inline-block"><div class="icon-2 w-embed"><svg width="420" height="420" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M3 3H21C21.2652 3 21.5196 3.10536 21.7071 3.29289C21.8946 3.48043 22 3.73478 22 4V20C22 20.2652 21.8946 20.5196 21.7071 20.7071C21.5196 20.8946 21.2652 21 21 21H3C2.73478 21 2.48043 20.8946 2.29289 20.7071C2.10536 20.5196 2 20.2652 2 20V4C2 3.73478 2.10536 3.48043 2.29289 3.29289C2.48043 3.10536 2.73478 3 3 3V3ZM12.06 11.683L5.648 6.238L4.353 7.762L12.073 14.317L19.654 7.757L18.346 6.244L12.061 11.683H12.06Z" fill="currentColor"/>
@@ -473,37 +579,60 @@ margin: 0rem !important;
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3ZM8 18C8.27614 18 8.5 17.7761 8.5 17.5V10.5C8.5 10.2239 8.27614 10 8 10H6.5C6.22386 10 6 10.2239 6 10.5V17.5C6 17.7761 6.22386 18 6.5 18H8ZM7.25 9C6.42157 9 5.75 8.32843 5.75 7.5C5.75 6.67157 6.42157 6 7.25 6C8.07843 6 8.75 6.67157 8.75 7.5C8.75 8.32843 8.07843 9 7.25 9ZM17.5 18C17.7761 18 18 17.7761 18 17.5V12.9C18.0325 11.3108 16.8576 9.95452 15.28 9.76C14.177 9.65925 13.1083 10.1744 12.5 11.1V10.5C12.5 10.2239 12.2761 10 12 10H10.5C10.2239 10 10 10.2239 10 10.5V17.5C10 17.7761 10.2239 18 10.5 18H12C12.2761 18 12.5 17.7761 12.5 17.5V13.75C12.5 12.9216 13.1716 12.25 14 12.25C14.8284 12.25 15.5 12.9216 15.5 13.75V17.5C15.5 17.7761 15.7239 18 16 18H17.5Z" fill="CurrentColor"/>
 </svg></div></a></div></div><div class="w-col w-col-2"><div class="footer-links-list"><a href="/" aria-current="page" class="footer-link w--current">How it Works</a><a href="/about-us" class="footer-link">About Us</a><a href="/blog" class="footer-link">Blog</a><a href="/charity/st-judes-childrens-research-hospital" class="footer-link">Giving Back</a><a href="/help-center" class="footer-link">Help Center</a></div></div></div></div><div class="sub-footer_container container-medium"><div class="sub-footer_wrapper"><div class="sub-footer-text">2026 © MediSave • Jan Aushadhi &amp; NPPA Healthcare Initiative</div></div><div class="sub-footer_wrapper"><a href="/terms-conditions" class="foot-sub_link">Terms &amp; Conditions</a><a href="/privacy-policy" class="foot-sub_link">Privacy Policy</a></div><a href="https://www.ensocreative.agency" target="_blank" class="agency_credit-link-3 w-inline-block"><div class="agency-credit-3"><img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/650c8acfbbeb3715bbf5b1d3_Ensorcis_logo%20copy.png" loading="lazy" alt="" class="credit-logo-2"/><div class="credit-text-2">ENSO Creative</div></div></a></div></div></main></div><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6375a1fe1054d4cf080053e5" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://assets-global.website-files.com/6375a1fe1054d4cf080053e5/js/budgetrx.ba14818d5.js" type="text/javascript"></script>
 <!-- MediSave Auth Login Modal -->
-<div id="auth-modal" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(18, 6, 70, 0.65); backdrop-filter:blur(6px); align-items:center; justify-content:center; padding:20px;">
-  <div style="background:#FFFFFF; width:100%; max-width:440px; border-radius:24px; padding:36px; box-shadow:0 24px 60px rgba(18,6,70,0.3); position:relative; color:#1B0A66;">
-    <button id="close-login-btn" style="position:absolute; top:20px; right:20px; background:none; border:none; font-size:24px; cursor:pointer; color:#575279; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:50%;">✕</button>
 
-    <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
-      <div style="width:36px; height:36px; background:#1B0A66; border-radius:10px; display:flex; align-items:center; justify-content:center;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A6D63A" stroke-width="2.5"><path d="M12 2v20M2 12h20"/></svg>
-      </div>
-      <span style="font-size:22px; font-weight:800; color:#1B0A66;">Medi<span style="color:#1FAE6B;">Save</span></span>
+<!-- Interactive Patient Auth Modal (Login & Sign Up) -->
+<div id="auth-modal" style="display:none; position:fixed; inset:0; z-index:999999; background:rgba(27,10,102,0.65); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); align-items:center; justify-content:center; padding:16px;">
+  <div style="background:#ffffff; border-radius:24px; max-width:440px; width:100%; padding:32px 28px; box-shadow:0 24px 60px rgba(0,0,0,0.25); position:relative; border:1px solid #E4E5DD; font-family:inherit;">
+    <button id="close-login-btn" type="button" style="position:absolute; top:20px; right:20px; background:#F7F8F2; border:none; width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; color:#1B0A66; font-size:18px; font-weight:700;">✕</button>
+
+    <!-- Header & Brand -->
+    <div style="text-align:center; margin-bottom:20px;">
+      <img src="https://cdn.prod.website-files.com/6375a1fe1054d4cf080053e5/63939ef90fc162a33c7d69dd_web-img.png" alt="MediSave Logo" width="46" height="46" style="width:46px; height:46px; object-fit:contain; border-radius:12px; margin:0 auto 12px; display:block;" />
+      <h3 id="auth-modal-title" style="font-size:22px; font-weight:800; color:#1B0A66; margin:0 0 4px;">Welcome to MediSave</h3>
+      <p id="auth-modal-subtitle" style="font-size:13px; color:#575279; margin:0;">Access your saved medicines, prescriptions &amp; Jan Aushadhi discounts</p>
     </div>
 
-    <h3 style="font-size:24px; font-weight:800; margin-bottom:6px; color:#1B0A66;">Welcome Back</h3>
-    <p style="font-size:14px; color:#575279; margin-bottom:24px; line-height:1.5;">Sign in to save prescriptions, track Jan Aushadhi savings, and locate nearby kendras.</p>
+    <!-- Auth Tabs: Sign In / Sign Up -->
+    <div style="display:flex; background:#F7F8F2; border-radius:12px; padding:4px; margin-bottom:20px;">
+      <button id="tab-login" type="button" style="flex:1; padding:8px; border:none; border-radius:8px; font-weight:700; font-size:14px; cursor:pointer; background:#1B0A66; color:#ffffff; transition:all 0.2s;">Sign In</button>
+      <button id="tab-signup" type="button" style="flex:1; padding:8px; border:none; border-radius:8px; font-weight:700; font-size:14px; cursor:pointer; background:transparent; color:#575279; transition:all 0.2s;">Sign Up / Register</button>
+    </div>
 
-    <form id="auth-form" onsubmit="event.preventDefault(); alert('Signed in successfully! Your saved prescriptions will now sync.'); document.getElementById('auth-modal').style.display='none';">
-      <div style="margin-bottom:16px;">
-        <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px; color:#1B0A66;">Mobile Number or Email</label>
-        <input type="text" required placeholder="+91 98765 43210 or name@mail.com" style="width:100%; padding:12px 16px; border:1.5px solid #E4E5DD; border-radius:12px; font-size:15px; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='#1B0A66'" onblur="this.style.borderColor='#E4E5DD'"/>
+    <!-- Login Form -->
+    <form id="login-form-view" onsubmit="event.preventDefault(); alert('Login successful! Welcome back to MediSave.'); document.getElementById('auth-modal').style.display='none';">
+      <div style="margin-bottom:14px;">
+        <label style="display:block; font-size:13px; font-weight:700; color:#1B0A66; margin-bottom:6px;">Mobile Number or Email</label>
+        <input type="text" placeholder="e.g. 9876543210 or name@example.com" required style="width:100%; padding:12px 14px; border:1.5px solid #E4E5DD; border-radius:12px; font-size:14px; outline:none; box-sizing:border-box;">
       </div>
-      <div style="margin-bottom:20px;">
-        <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px; color:#1B0A66;">Password or OTP</label>
-        <input type="password" required placeholder="Enter your 6-digit OTP or password" style="width:100%; padding:12px 16px; border:1.5px solid #E4E5DD; border-radius:12px; font-size:15px; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='#1B0A66'" onblur="this.style.borderColor='#E4E5DD'"/>
+      <div style="margin-bottom:18px;">
+        <label style="display:block; font-size:13px; font-weight:700; color:#1B0A66; margin-bottom:6px;">Password or 6-digit OTP</label>
+        <div style="display:flex; gap:8px;">
+          <input type="password" placeholder="Enter password or OTP" required style="flex:1; padding:12px 14px; border:1.5px solid #E4E5DD; border-radius:12px; font-size:14px; outline:none; box-sizing:border-box;">
+          <button type="button" onclick="alert('Demo OTP sent: 482910');" style="background:#F7F8F2; border:1px solid #E4E5DD; padding:0 14px; border-radius:12px; font-size:12px; font-weight:700; color:#1B0A66; cursor:pointer; white-space:nowrap;">Get OTP</button>
+        </div>
       </div>
-
-      <button type="submit" style="width:100%; background:#1FAE6B; color:#ffffff; font-weight:700; font-size:16px; padding:14px; border:none; border-radius:9999px; cursor:pointer; transition:background 0.2s; box-shadow:0 4px 14px rgba(31,174,107,0.3);" onmouseover="this.style.background='#19945a'" onmouseout="this.style.background='#1FAE6B'">
+      <button type="submit" style="width:100%; background:#1FAE6B; color:#ffffff; font-weight:700; font-size:15px; padding:13px; border:none; border-radius:9999px; cursor:pointer; transition:background 0.2s; box-shadow:0 4px 14px rgba(31,174,107,0.3);">
         Sign In to MediSave
       </button>
+    </form>
 
-      <div style="text-align:center; margin-top:16px; font-size:13px; color:#575279;">
-        Don't have an account? <a href="#" onclick="alert('Account creation is open to all patients. Enter your mobile number to get an instant OTP!');" style="color:#1B0A66; font-weight:700; text-decoration:none;">Register Free</a>
+    <!-- Sign Up Form -->
+    <form id="signup-form-view" style="display:none;" onsubmit="event.preventDefault(); alert('Account registered successfully! Welcome to MediSave.'); document.getElementById('auth-modal').style.display='none';">
+      <div style="margin-bottom:12px;">
+        <label style="display:block; font-size:13px; font-weight:700; color:#1B0A66; margin-bottom:6px;">Full Patient Name</label>
+        <input type="text" placeholder="e.g. Priya Sharma" required style="width:100%; padding:11px 14px; border:1.5px solid #E4E5DD; border-radius:12px; font-size:14px; outline:none; box-sizing:border-box;">
       </div>
+      <div style="margin-bottom:12px;">
+        <label style="display:block; font-size:13px; font-weight:700; color:#1B0A66; margin-bottom:6px;">Mobile Number</label>
+        <input type="tel" placeholder="10-digit mobile number" required style="width:100%; padding:11px 14px; border:1.5px solid #E4E5DD; border-radius:12px; font-size:14px; outline:none; box-sizing:border-box;">
+      </div>
+      <div style="margin-bottom:18px;">
+        <label style="display:block; font-size:13px; font-weight:700; color:#1B0A66; margin-bottom:6px;">City / Pincode (to find nearest Kendra)</label>
+        <input type="text" placeholder="e.g. New Delhi, 110001" required style="width:100%; padding:11px 14px; border:1.5px solid #E4E5DD; border-radius:12px; font-size:14px; outline:none; box-sizing:border-box;">
+      </div>
+      <button type="submit" style="width:100%; background:#1B0A66; color:#ffffff; font-weight:700; font-size:15px; padding:13px; border:none; border-radius:9999px; cursor:pointer; transition:background 0.2s; box-shadow:0 4px 14px rgba(27,10,102,0.3);">
+        Create Patient Account Free
+      </button>
     </form>
   </div>
 </div>
@@ -511,28 +640,76 @@ margin: 0rem !important;
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const modal = document.getElementById('auth-modal');
-  const openBtn = document.getElementById('open-login-btn');
-  const openMobileBtn = document.getElementById('open-login-mobile-btn');
+  const openLoginBtn = document.getElementById('open-login-btn');
+  const openSignupBtn = document.getElementById('open-signup-btn');
   const closeBtn = document.getElementById('close-login-btn');
+  const tabLogin = document.getElementById('tab-login');
+  const tabSignup = document.getElementById('tab-signup');
+  const loginView = document.getElementById('login-form-view');
+  const signupView = document.getElementById('signup-form-view');
 
-  function openModal() { if (modal) modal.style.display = 'flex'; }
-  function closeModal() { if (modal) modal.style.display = 'none'; }
+  function showLogin() {
+    if (tabLogin && tabSignup && loginView && signupView) {
+      tabLogin.style.background = '#1B0A66';
+      tabLogin.style.color = '#ffffff';
+      tabSignup.style.background = 'transparent';
+      tabSignup.style.color = '#575279';
+      loginView.style.display = 'block';
+      signupView.style.display = 'none';
+    }
+  }
 
-  if (openBtn) openBtn.addEventListener('click', openModal);
-  if (openMobileBtn) openMobileBtn.addEventListener('click', openModal);
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  function showSignup() {
+    if (tabLogin && tabSignup && loginView && signupView) {
+      tabSignup.style.background = '#1B0A66';
+      tabSignup.style.color = '#ffffff';
+      tabLogin.style.background = 'transparent';
+      tabLogin.style.color = '#575279';
+      loginView.style.display = 'none';
+      signupView.style.display = 'block';
+    }
+  }
+
+  if (tabLogin) tabLogin.addEventListener('click', showLogin);
+  if (tabSignup) tabSignup.addEventListener('click', showSignup);
+
+  if (openLoginBtn) {
+    openLoginBtn.addEventListener('click', function() {
+      showLogin();
+      if (modal) modal.style.display = 'flex';
+    });
+  }
+
+  if (openSignupBtn) {
+    openSignupBtn.addEventListener('click', function() {
+      showSignup();
+      if (modal) modal.style.display = 'flex';
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      if (modal) modal.style.display = 'none';
+    });
+  }
 
   if (modal) {
     modal.addEventListener('click', function(e) {
-      if (e.target === modal) closeModal();
+      if (e.target === modal) modal.style.display = 'none';
     });
   }
 
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Escape' && modal) modal.style.display = 'none';
   });
+
+  // Aggressively remove any Webflow badge that gets injected by scripts
+  function removeBadges() {
+    document.querySelectorAll('.w-webflow-badge, a[href*="webflow.com"]').forEach(el => el.remove());
+  }
+  removeBadges();
+  setInterval(removeBadges, 250);
 });
 </script>
 
 </body></html>
-</pasted_content id="e324">
