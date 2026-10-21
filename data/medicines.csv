@@ -1,0 +1,41 @@
+id,brand,molecule,strength,form,pack_size,brand_mrp_inr,ja_price_inr,source
+M001,Dolo 650,Paracetamol,650 mg,Tablet,15,34.00,10.50,SAMPLE_REPLACE_ME
+M002,Crocin 650,Paracetamol,650 mg,Tablet,15,33.50,10.50,SAMPLE_REPLACE_ME
+M003,Calpol 500,Paracetamol,500 mg,Tablet,15,18.00,7.00,SAMPLE_REPLACE_ME
+M004,Augmentin 625 Duo,Amoxicillin and Clavulanic Acid,500 mg + 125 mg,Tablet,10,204.00,52.00,SAMPLE_REPLACE_ME
+M005,Clavam 625,Amoxicillin and Clavulanic Acid,500 mg + 125 mg,Tablet,10,201.00,52.00,SAMPLE_REPLACE_ME
+M006,Moxikind-CV 625,Amoxicillin and Clavulanic Acid,500 mg + 125 mg,Tablet,10,180.00,52.00,SAMPLE_REPLACE_ME
+M007,Pan 40,Pantoprazole,40 mg,Tablet,15,155.00,15.00,SAMPLE_REPLACE_ME
+M008,Pantocid 40,Pantoprazole,40 mg,Tablet,15,160.00,15.00,SAMPLE_REPLACE_ME
+M009,Pan-D,Pantoprazole + Domperidone,40 mg + 30 mg,Capsule,15,199.00,28.00,SAMPLE_REPLACE_ME
+M010,Pantop-DSR,Pantoprazole + Domperidone,40 mg + 30 mg,Capsule,10,145.00,19.00,SAMPLE_REPLACE_ME
+M011,Omez 20,Omeprazole,20 mg,Capsule,20,68.00,9.00,SAMPLE_REPLACE_ME
+M012,Razo 20,Rabeprazole,20 mg,Tablet,15,148.00,16.50,SAMPLE_REPLACE_ME
+M013,Atorva 10,Atorvastatin,10 mg,Tablet,15,98.00,12.00,SAMPLE_REPLACE_ME
+M014,Atorlip 20,Atorvastatin,20 mg,Tablet,15,185.00,22.00,SAMPLE_REPLACE_ME
+M015,Storvas 10,Atorvastatin,10 mg,Tablet,15,95.00,12.00,SAMPLE_REPLACE_ME
+M016,Rosuvas 10,Rosuvastatin,10 mg,Tablet,15,198.00,25.00,SAMPLE_REPLACE_ME
+M017,Rozavel 10,Rosuvastatin,10 mg,Tablet,10,140.00,17.00,SAMPLE_REPLACE_ME
+M018,Glycomet 500,Metformin,500 mg,Tablet,20,24.00,7.00,SAMPLE_REPLACE_ME
+M019,Glycomet-GP 1,Metformin + Glimepiride,500 mg + 1 mg,Tablet,15,85.00,15.00,SAMPLE_REPLACE_ME
+M020,Glycomet-GP 2,Metformin + Glimepiride,500 mg + 2 mg,Tablet,15,118.00,19.00,SAMPLE_REPLACE_ME
+M021,Jalra-M 50/500,Vildagliptin + Metformin,50 mg + 500 mg,Tablet,15,310.00,42.00,SAMPLE_REPLACE_ME
+M022,Telma 40,Telmisartan,40 mg,Tablet,15,138.00,14.00,SAMPLE_REPLACE_ME
+M023,Telmikind 40,Telmisartan,40 mg,Tablet,10,65.00,9.50,SAMPLE_REPLACE_ME
+M024,Telma-H,Telmisartan + Hydrochlorothiazide,40 mg + 12.5 mg,Tablet,15,188.00,21.00,SAMPLE_REPLACE_ME
+M025,Telma-AM,Telmisartan + Amlodipine,40 mg + 5 mg,Tablet,15,192.00,22.00,SAMPLE_REPLACE_ME
+M026,Amlokind 5,Amlodipine,5 mg,Tablet,15,35.00,5.50,SAMPLE_REPLACE_ME
+M027,Norvasc 5,Amlodipine,5 mg,Tablet,14,75.00,5.00,SAMPLE_REPLACE_ME
+M028,Azee 500,Azithromycin,500 mg,Tablet,5,132.00,38.00,SAMPLE_REPLACE_ME
+M029,Azithral 500,Azithromycin,500 mg,Tablet,5,130.00,38.00,SAMPLE_REPLACE_ME
+M030,Zithrox 500,Azithromycin,500 mg,Tablet,5,128.00,38.00,SAMPLE_REPLACE_ME
+M031,Montair-LC,Montelukast + Levocetirizine,10 mg + 5 mg,Tablet,10,198.00,32.00,SAMPLE_REPLACE_ME
+M032,Montek-LC,Montelukast + Levocetirizine,10 mg + 5 mg,Tablet,10,190.00,32.00,SAMPLE_REPLACE_ME
+M033,Cetzine 10,Cetirizine,10 mg,Tablet,10,22.00,4.50,SAMPLE_REPLACE_ME
+M034,Allegra 120,Fexofenadine,120 mg,Tablet,10,175.00,29.00,SAMPLE_REPLACE_ME
+M035,Combiflam,Ibuprofen + Paracetamol,400 mg + 325 mg,Tablet,20,46.00,12.00,SAMPLE_REPLACE_ME
+M036,Zerodol-P,Aceclofenac + Paracetamol,100 mg + 325 mg,Tablet,10,68.00,14.00,SAMPLE_REPLACE_ME
+M037,Shelcal 500,Calcium + Vitamin D3,500 mg + 250 IU,Tablet,15,135.00,25.00,SAMPLE_REPLACE_ME
+M038,Cipcal 500,Calcium + Vitamin D3,500 mg + 250 IU,Tablet,15,120.00,25.00,SAMPLE_REPLACE_ME
+M039,Thyronorm 50,Thyroxine Sodium,50 mcg,Tablet,120,180.00,45.00,SAMPLE_REPLACE_ME
+M040,Eltroxin 50,Thyroxine Sodium,50 mcg,Tablet,120,175.00,45.00,SAMPLE_REPLACE_ME

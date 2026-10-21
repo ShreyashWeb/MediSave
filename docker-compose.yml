@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: medisave-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: medisave-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - GEMMA_BASE_URL=http://ollama:11434
+      - GEMMA_MODEL=gemma4
+      - GEMMA_TIMEOUT_SECONDS=45.0
+      - ALLOWED_ORIGINS=*
+    depends_on:
+      - ollama
+    restart: unless-stopped
+
+volumes:
+  ollama_models:

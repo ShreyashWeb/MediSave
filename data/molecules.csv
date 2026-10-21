@@ -1,0 +1,48 @@
+molecule,molecular_formula,pubchem_cid,therapeutic_class
+Paracetamol,C8H9NO2,1983,Analgesic & Antipyretic
+Amoxicillin and Clavulanic Acid,C16H19N3O5S . C8H9NO5,33613,Antibacterial Combination
+Pantoprazole,C16H15F2N3O4S,4679,Proton Pump Inhibitor (Antacid)
+Pantoprazole and Domperidone,Combination,N/A,Gastroprokinetic & PPI
+Atorvastatin,C33H35FN2O5,60823,HMG-CoA Reductase Inhibitor (Statin)
+Metformin Hydrochloride,C4H11N5 . HCl,14219,Biguanide (Antidiabetic)
+Metformin and Glimepiride,Combination,N/A,Oral Hypoglycemic Combination
+Telmisartan,C33H30N4O2,65999,Angiotensin Receptor Blocker (Antihypertensive)
+Telmisartan and Amlodipine,Combination,N/A,Antihypertensive Combination
+Amlodipine,C20H25ClN2O5,2162,Calcium Channel Blocker (Antihypertensive)
+Azithromycin,C38H72N2O12,447043,Macrolide Antibiotic
+Montelukast and Levocetirizine,Combination,N/A,Leukotriene Receptor Antagonist & Antihistamine
+Cetirizine Hydrochloride,C21H25ClN2O3 . 2HCl,2678,Second-Generation Antihistamine
+Levocetirizine,C21H25ClN2O3,154900,Antihistamine
+Omeprazole,C17H19N3O3S,4594,Proton Pump Inhibitor (Antacid)
+Omeprazole and Domperidone,Combination,N/A,Antacid & Antiemetic
+Losartan Potassium,C22H22ClKN6O,62947,Angiotensin II Receptor Antagonist
+Losartan and Hydrochlorothiazide,Combination,N/A,Antihypertensive Combination
+Ibuprofen,C13H18O2,3672,Nonsteroidal Anti-inflammatory Drug (NSAID)
+Ibuprofen and Paracetamol,Combination,N/A,NSAID & Analgesic
+Aceclofenac and Paracetamol,Combination,N/A,Analgesic & Anti-inflammatory
+Aceclofenac Paracetamol and Serratiopeptidase,Combination,N/A,Anti-inflammatory Enzyme Combination
+Calcium Carbonate and Vitamin D3,Combination,N/A,Nutritional Supplement
+Vitamin B-Complex with Vitamin C,Combination,N/A,Vitamin Supplement
+Ranitidine Hydrochloride,C13H22N4O3S . HCl,3033332,H2 Receptor Antagonist (Antacid)
+Rosuvastatin,C22H28FN3O6S,446157,Statin (Lipid-lowering Agent)
+Aspirin,C9H8O4,2244,Antiplatelet & Analgesic
+Clopidogrel,C16H16ClNO2S,60606,Antiplatelet Agent
+Aspirin and Clopidogrel,Combination,N/A,Dual Antiplatelet Therapy
+Cefixime,C16H15N5O7S2,5362065,Third-Generation Cephalosporin Antibiotic
+Ciprofloxacin,C17H18FN3O3,2764,Fluoroquinolone Antibiotic
+Ofloxacin and Ornidazole,Combination,N/A,Antimicrobial Combination
+Salbutamol,C13H21NO3,2088,Short-Acting Beta-2 Agonist (Bronchodilator)
+Budesonide and Formoterol,Combination,N/A,Inhaled Corticosteroid & LABA
+Dextromethorphan Phenylephrine Chlorpheniramine,Combination,N/A,Cough & Cold Combination
+Ambroxol Levosalbutamol Guaiphenesin,Combination,N/A,Expectorant & Bronchodilator
+Ondansetron,C18H19N3O,4595,5-HT3 Receptor Antagonist (Antiemetic)
+Rabeprazole,C18H21N3O3S,5029,Proton Pump Inhibitor (Antacid)
+Rabeprazole and Domperidone,Combination,N/A,Antacid & Antiemetic
+Diclofenac Sodium,C14H10Cl2NNaO2,5018304,NSAID (Analgesic)
+Tramadol and Paracetamol,Combination,N/A,Opioid & Non-opioid Analgesic
+Levothyroxine Sodium,C15H10I4NNaO4,23666113,Thyroid Hormone (Levothyroxine)
+Gabapentin,C9H17NO2,3446,Anticonvulsant & Neuropathic Pain Agent
+Pregabalin,C8H17NO2,5466942,Anticonvulsant & Anxiolytic
+Escitalopram,C20H21FN2O,146570,Selective Serotonin Reuptake Inhibitor (SSRI)
+Alprazolam,C17H13ClN4,2118,Benzodiazepine (Anxiolytic)
+Clonazepam,C15H10ClN3O3,2802,Benzodiazepine (Anticonvulsant)
